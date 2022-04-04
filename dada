@@ -1,0 +1,37 @@
+show tables;
+SELECT * from clientes;
+SELECT * FROM articulos;
+SELECT * FROM facturas;
+SELECT * from detalles;
+describe clientes;
+describe articulos;
+describe facturas;
+describe detalles;
+
+insert into clientes (nombre,apellido,estado_civil,cuit,direccion,telefono,email,comentarios) values
+('Marta','Gomez','SOLTERO',42102443,'Av siempre viva 321','48654982','Martita@gmail.com','Hola soy Marta Gomez'),
+('Maite','Garcia','CASADO',5869230,'Lopez de vega 153','45620331','MaiteCrisis@hotmail.com','Hola soy Maite'),
+('Martin','Camacho','VIUDO',2563321,'Pasco 1233','40208965','MartinEze@gmail.com','Hola soy Camacho'),
+('Ermelinda','Yaccuzzi','DIVORCIADO',3625177,'AV.Entre Rios 1633','46597946','YaccuErme@gmail.com','Hola soy Ermelinda'),
+('Jose','Santos','SOLTERO',51635,'Gorriti 4564','JosePedrol@gmail.com','45613975','Hola soy Santos');
+
+insert into articulos(descripcion,rubro,costo,precio,stock,stock_minimo,stock_maximo) VALUES
+('Coca Cola','BEBIDAS',50,250,100,0,500),
+('Jamon Natural 42','FIAMBRERIA',10,130,20,0,200),
+('Pan Lactal','PANADERIA',5,300,20,2,100), 
+('Detergente','LIMPIEZA ',200,500,56,10,1000),
+('Chorizo','CARNICERIA',150,300,15,0,500);
+
+INSERT into facturas(letra,numero,fecha,monto,forma_de_pago,id_cliente) VALUES
+('A',135789,'2022/05/20',1000,'EFECTIVO',2),
+('A',135159,'2021/10/12',2000,'EFECTIVO',5),
+('A',135147,'2020/08/30',5000,'TARJETA',3),
+('A',135963,'2019/04/18',4500,'DEBITO',1),
+('A',135322,'2020/11/27',3500,'CHEQUE',4);
+
+INSERT into detalles(id_factura,id_articulo,cantidad,precio_unitario)VALUES
+(1,1,50,5000),
+(5,4,10,200),
+(4,2,30,6000),
+(3,3,400,2000),
+(1,2,150,3500);
