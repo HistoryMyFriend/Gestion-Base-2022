@@ -17,7 +17,7 @@ insert into clientes (nombre,apellido,estado_civil,cuit,direccion,telefono,email
 
 insert into articulos(descripcion,rubro,costo,precio,stock,stock_minimo,stock_maximo) VALUES
 ('Coca Cola','BEBIDAS',50,250,100,0,500),
-('Jamon Natural 42','FIAMBRERIA',10,130,20,0,200),
+('Jamon Natural 42','FIAMBRES',10,130,20,0,200),
 ('Pan Lactal','PANADERIA',5,300,20,2,100), 
 ('Detergente','LIMPIEZA ',200,500,56,10,1000),
 ('Chorizo','CARNICERIA',150,300,15,0,500);
