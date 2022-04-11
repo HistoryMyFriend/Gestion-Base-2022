@@ -35,3 +35,31 @@ INSERT into detalles(id_factura,id_articulo,cantidad,precio_unitario)VALUES
 (4,2,30,6000),
 (3,3,400,2000),
 (1,2,150,3500);
+
+
+
+-- Que clientes (nombre, apellido) compraron bebidas?
+SELECT nombre,apellido from clientes JOIN  articulos on articulos.id=clientes.id
+where rubro="BEBIDAS";
+-- Que articulos(descripción, rubro, precio) compro el cliente 'Juan' 'Perez'
+ SELECT descripcion,rubro,precio from articulos join clientes on clientes.id=articulos.id
+ where nombre="Marta" && apellido="Gomez";
+
+-- Lista de articulos a reponer + cantidad y costo de la reposición?
+-- No me salio!!!!
+ -- select codigo, precio,stock,stock_maximo-stock cantidad_a_reponer,
+--stock_minimo,stock_maximo from articulos where stock<stock_minimo;
+
+-- Cuanto es el monto total vendido al cliente 'Juan', 'Perez'?
+SELECT round(monto) montoTotal from facturas JOIN clientes on clientes.id=facturas.id
+where nombre="Maite" && apellido="Garcia";
+
+-- Total facturado por mes
+-- No me salieron !!!!
+
+-- select month(fecha) mes from facturas;
+
+-- select max(monto) facturado from facturas;
+
+-- Total facturado por rubro
+
